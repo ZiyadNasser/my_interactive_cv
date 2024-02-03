@@ -1,0 +1,47 @@
+.messageForm h2 {
+  font-size: 2em;
+  color: #fff;
+}
+
+.messageForm .inputBx input {
+  position: relative;
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 1rem;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  font-size: 1.2em;
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+}
+
+.messageForm .inputBx input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+.messageForm .links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.messageForm .links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.messageForm .inputBx .textarea {
+    position: relative;
+    width: 100%;
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    font-size: 1.2em;
+    color: #fff;
+    box-shadow: none;
+    outline: none;
+  }

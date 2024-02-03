@@ -1,0 +1,166 @@
+@font-face {
+    font-family: 'cairoplay';
+    src: url('/assets/fonts/CairoPlay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'notoRegular';
+    src: url('/assets/fonts/NotoKufiArabic-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'notoBold';
+    src: url('/assets/fonts/NotoKufiArabic-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'notoSemeBold';
+    src: url('/assets/fonts/NotoKufiArabic-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    p, h3, h3, h4, h5,span, a {
+    font-family: 'notoRegular', sans-serif;
+  }
+
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#vanta-bg {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+  
+.welcome{
+    font-family: 'cairoplay', sans-serif;
+    margin-top: 5%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.734);
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+.info-container{
+    margin-top: 4%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.734);
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    bottom: 0; 
+    width: 100%;  
+}
+
+.brief{
+  font-size: 1.2rem;
+}
+
+.brief-content{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-btn {
+    text-decoration: none;
+    margin: 1%;
+    border: none;
+    width: 100%;
+    height: 5em;
+    border-radius: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background: #1C1A1C;
+    cursor: pointer;
+    transition: all 450ms ease-in-out;
+  }
+  
+  .sparkle {
+    fill: #AAAAAA;
+    transition: all 800ms ease;
+  }
+  
+  .text {
+    font-weight: 600;
+    color: #AAAAAA;
+    font-size: medium;
+  }
+  
+  .link-btn:hover {
+    background: linear-gradient(0deg,#A47CF3,#683FEA);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+    inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+    0px 0px 180px 0px #9917FF;
+    transform: translateY(-2px);
+  }
+  
+  .link-btn:hover .text {
+    color: white;
+  }
+  
+  .link-btn:hover .sparkle {
+    fill: white;
+    transform: scale(1.2);
+  }
+
+  .int-btn-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 10px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.int-btn-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.int-btn-hover:focus {
+  outline: none;
+}
+
+.int-btn-hover.int-btn {
+  background-image: linear-gradient(
+    to right,
+    #667eea,
+    #764ba2,
+    #6b8dd6,
+    #8e37d7
+  );
+  box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}

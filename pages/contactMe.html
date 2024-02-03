@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../style/main_page.css">
+        <link rel="stylesheet" href="../style/nav.css">
+        <link rel="stylesheet" href="../style/form.css">
+        <link rel="stylesheet" href="../libraries/bootstrap-5.3.2/dist/css/bootstrap.min.css">  
+        <link rel="stylesheet" href="../libraries/animate/animate.css"/>
+        <title>  التواصل</title>
+    </head>
+
+    <body>
+        <div id="vanta-bg"></div>
+
+        <header id="myHeader" class="" >
+            <nav class="navbar mt-3 navbar-expand-md">
+                <div class="container-fluid">
+                    <button class="navbar-toggler m-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <svg width="50px" height="50px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path fill="#fff" fill-rule="evenodd" d="M18 5a1 1 0 100-2H2a1 1 0 000 2h16zm0 4a1 1 0 100-2H2a1 1 0 100 2h16zm1 3a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 5a1 1 0 100-2H2a1 1 0 100 2h16z"/>
+                          </svg>
+                                                
+                        </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="../index.html">الصفحة الرئيسية</a>
+                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="aboutMe.html">عن زياد آل كدم</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="cv.html">السيرة الذاتية</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="intreset.html">صفحة الاهتمامات</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="contactMe.html">للتواصل معي</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+
+        </header>
+
+        <main class="container pb-5">
+
+            <div class="welcome">
+                <h1>للتواصل معي:</h1>
+            </div>
+
+            <div class="info-container animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="brief p-5">
+                    <div class="ring"  style="margin: 0 auto;">
+                        <i style="--clr:#351179;"></i>
+                        <i style="--clr:#5900ff;"></i>
+                        <i style="--clr:#44daff;"></i>
+                        <div class="messageForm">
+                        <h2>ادخال بيانتك ورسالتك</h2>
+                        <div class="inputBx">
+                            <form id="myForm">
+                                <div class="inputBx">
+                                    <input type="email" name="user_email" class="form-control" placeholder="أدخل ايميلك" data-bs-theme="dark" required>
+                                </div>
+                                <div class="inputBx">
+                                    <input type="text" name="from_name" class="form-control" placeholder="أدخل اسمك" data-bs-theme="dark" required>
+                                </div>
+                                <div class="inputBx">
+                                    <textarea class="form-control textarea" name="message" placeholder="اكتب رسالتك" data-bs-theme="dark" required></textarea>
+                                </div>
+                                <div class="inputBx">
+                                    <button type="submit" class="btn btn-lg btn-outline-primary mt-3">إرسال</button>
+                                </div>
+                            </form>
+                                                 
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="mt-5">
+                        <h2>أو عبر حسابي في منصة X</h2>
+                        <div>
+                            <a href="https://twitter.com/zyadalnasser6" target="_blank">
+                                <img src="../assets/images/x.avif" width="40" height="auto" style="border-radius: 100px;" alt="x platform">
+                                <span>@zyadalnasser6</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </body>
+
+    <script src="../libraries/three.r134.min.js"></script>
+    <script src="../libraries/vanta/dist/vanta.net.min.js"></script>
+    <script src="../js/background.js" ></script>
+
+    <script src="../libraries/WOW-master/dist/wow.js"></script>
+    <script src="../libraries/bootstrap-5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          emailjs.init("bNU0i5UDKl-0bL_is");
+        
+          document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+        
+            var user_email = document.querySelector('[name="user_email"]').value;
+            var from_name = document.querySelector('[name="from_name"]').value;
+            var message = document.querySelector('[name="message"]').value;
+        
+            var params = {
+                user_email, 
+                from_name,  
+                message 
+            };
+        
+            emailjs.send('service_ic1c78f', 'template_gwcrw1o', params)
+                .then(function(response) {
+                     console.log('SUCCESS!', response.status, response.text);
+                     alert("Email sent successfully!");
+                }, function(error) {
+                     console.log('FAILED...', error);
+                     alert("Failed to send the email.");
+                });
+          });
+        });
+        </script>
+        
+</html>

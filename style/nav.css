@@ -1,0 +1,28 @@
+.navbar-collapse {
+    justify-content: center;
+}
+
+.navbar-nav {
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar{
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 70%;
+    background-color: rgba(42, 37, 88, 0.795) !important;
+}
+
+.nav-link{
+    color: aliceblue !important;
+}
+
+.nav-link:hover{
+    color: rgb(125, 125, 206) !important;
+}
+
+.active{
+    color: aquamarine  !important;
+    font-weight: 900 !important;
+}
